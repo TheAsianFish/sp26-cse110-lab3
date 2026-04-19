@@ -397,3 +397,8 @@ section.highlighted {
         width: 92%;
     }
 }
+
+/* smooth scroll for nav links */
+html {
+    scroll-behavior: smooth;
+}
