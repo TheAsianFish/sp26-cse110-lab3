@@ -1,4 +1,4 @@
-# Lab 2 - Starter
+# CSE 110 Lab 3
 
-Published site:
-https://theasianfish.github.io/Lab2_Starter/ 
+## GitHub Pages Site
+https://TheAsianFish.github.io/sp26-cse110-lab3
