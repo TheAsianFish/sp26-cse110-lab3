@@ -5,11 +5,18 @@
     <title>Meeting Minutes</title>
     <meta charset="UTF-8">
     <meta name="description" content="CSE 110 Lab 2 meeting minutes page">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        footer p {
+            letter-spacing: 0.05em;
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1>Project Group 05 First Brainstorm</h1>
+        <h1 style="text-transform: uppercase;">Project Group 05 First Brainstorm</h1>
         <p>Meeting topic: Brainstorming</p>
         <p>Date: April 9, 2026</p>
     </header>
@@ -91,21 +98,26 @@
 
         <section id="media">
             <h2>Media</h2>
-
-            <h3>Diagram</h3>
-            <img src="assets/Diagram.jpg" alt="Sketch of app layout from the meeting" width="300">
-
-            <h3>Audio Recording</h3>
-            <audio controls>
-                <source src="assets/music.m4a" type="audio/mp4">
-                Your browser does not support the audio element.
-            </audio>
-
-            <h3>Video Recording</h3>
-            <video controls width="300">
-                <source src="assets/video.mp4" type="video/mp4">
-                Your browser does not support the video element.
-            </video>
+            <div class="media-grid">
+                <div>
+                    <h3>Diagram</h3>
+                    <img src="assets/Diagram.jpg" alt="Sketch of app layout from the meeting" width="300">
+                </div>
+                <div>
+                    <h3>Audio Recording</h3>
+                    <audio controls>
+                        <source src="assets/music.m4a" type="audio/mp4">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div>
+                    <h3>Video Recording</h3>
+                    <video controls width="300">
+                        <source src="assets/video.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                </div>
+            </div>
         </section>
 
 
@@ -114,22 +126,32 @@
             <form>
                 <fieldset>
                     <legend>Meeting Feedback</legend>
+                    <div class="form-grid">
+                        <p>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" list="name-options">
+                        </p>
 
-                    <p>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" list="name-options">
-                    </p>
+                        <datalist id="name-options">
+                            <option value="Patrick"></option>
+                            <option value="Alice"></option>
+                            <option value="Brian"></option>
+                        </datalist>
 
-                    <datalist id="name-options">
-                        <option value="Patrick"></option>
-                        <option value="Alice"></option>
-                        <option value="Brian"></option>
-                    </datalist>
+                        <p>
+                            <label for="next-date">Preferred next meeting date:</label>
+                            <input type="date" id="next-date" name="next-date">
+                        </p>
 
-                    <p>
-                        <label for="next-date">Preferred next meeting date:</label>
-                        <input type="date" id="next-date" name="next-date">
-                    </p>
+                        <p>
+                            <label for="role">Preferred role:</label>
+                            <select id="role" name="role">
+                                <option value="developer">Developer</option>
+                                <option value="designer">Designer</option>
+                                <option value="tester">Tester</option>
+                            </select>
+                        </p>
+                    </div>
 
                     <p>Did you attend?</p>
                     <label><input type="radio" name="attended" value="yes"> Yes</label>
@@ -139,15 +161,6 @@
                     <label><input type="checkbox" name="topic" value="design"> Design</label>
                     <label><input type="checkbox" name="topic" value="features"> Features</label>
                     <label><input type="checkbox" name="topic" value="planning"> Planning</label>
-
-                    <p>
-                        <label for="role">Preferred role:</label>
-                        <select id="role" name="role">
-                            <option value="developer">Developer</option>
-                            <option value="designer">Designer</option>
-                            <option value="tester">Tester</option>
-                        </select>
-                    </p>
 
                     <p>
                         <label for="comments">Comments:</label><br>
