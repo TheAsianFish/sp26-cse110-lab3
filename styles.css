@@ -402,3 +402,16 @@ section.highlighted {
 html {
     scroll-behavior: smooth;
 }
+
+section {
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+section:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+details summary {
+    color: darkslategray;
+}
